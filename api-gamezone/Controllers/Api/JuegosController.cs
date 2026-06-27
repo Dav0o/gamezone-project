@@ -3,7 +3,7 @@ using api_gamezone.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace api_gamezone.Controllers
+namespace api_gamezone.Controllers.Api
 {
     [Route("api/[controller]")]
     [ApiController]
