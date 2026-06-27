@@ -33,14 +33,14 @@ namespace api_gamezone.Controllers.Api
             return Ok(juego);                           // 200 + JSON
         }
 
-        // POST /api/juegos
-        [HttpPost]
-        public async Task<ActionResult<Juego>> Create([FromBody] Juego juego)
-        {
-            var creado = await _service.CreateAsync(juego);
-            return CreatedAtAction(nameof(GetById),
-                new { id = creado.Id }, creado);        // 201 + Location header
-        }
+        //// POST /api/juegos
+        //[HttpPost]
+        //public async Task<ActionResult<Juego>> Create([FromBody] Juego juego)
+        //{
+        //    var creado = await _service.CreateAsync(juego);
+        //    return CreatedAtAction(nameof(GetById),
+        //        new { id = creado.Id }, creado);        // 201 + Location header
+        //}
 
         // PUT /api/juegos/5
         [HttpPut("{id}")]
@@ -51,13 +51,13 @@ namespace api_gamezone.Controllers.Api
             return Ok(actualizado);                     // 200 + JSON
         }
 
-        // DELETE /api/juegos/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var eliminado = await _service.DeleteAsync(id);
-            if (!eliminado) return NotFound();          // 404
-            return NoContent();                         // 204
-        }
+        //// DELETE /api/juegos/5
+        //[HttpDelete("{id}")]
+        //public async Task<IActionResult> Delete(int id)
+        //{
+        //    var eliminado = await _service.DeleteAsync(id);
+        //    if (!eliminado) return NotFound();          // 404
+        //    return NoContent();                         // 204
+        //}
     }
 }
